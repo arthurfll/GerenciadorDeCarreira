@@ -8,5 +8,4 @@ VOLUME [ "/app/DotnetApi" ]
 
 WORKDIR /app/DotnetApi
 
-CMD ["dotnet", "run", "--urls", "http://0.0.0.0:5555"]
-
+CMD ["dotnet", "watch", "run", "--urls", "http://0.0.0.0:5555"]
