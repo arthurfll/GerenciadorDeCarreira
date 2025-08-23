@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "safety_api": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7110",
-      "launchBrowser": false
-    }
-  }
-}
