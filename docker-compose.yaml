@@ -37,10 +37,13 @@ services:
       - 10002:10002
     volumes:
       - ./Dev/Storage/azurite-data:/data
+    networks:
+      - live_prometheus
 volumes:
   pgdata:
 
 networks:
   live_prometheus:
     driver: bridge
+
 
