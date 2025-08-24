@@ -28,10 +28,19 @@ services:
       - live_prometheus
     volumes:
       - ./Observability/Prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
-
+  azurite:
+    build: ./Dev/Storage
+    container_name: azurite
+    ports:
+      - 10000:10000
+      - 10001:10001
+      - 10002:10002
+    volumes:
+      - ./Dev/Storage/azurite-data:/data
 volumes:
   pgdata:
 
 networks:
   live_prometheus:
     driver: bridge
+
