@@ -1,0 +1,22 @@
+Development
+  - .NET
+  - Azure Functions
+  - PostgreSQL
+  - Azurite
+  - Redis
+
+CI-CD
+  - Jenkins
+
+Infrastructure
+  - Terraform
+
+Containerization
+  - Docker
+  - Kubernets
+
+Observability
+  - Prometheus
+  - Grafana
+
+

@@ -1,7 +1,7 @@
 
 services:
   postgres:
-    build: ./Dev/Database
+    build: ./Development/Database
     container_name: postgres
     ports:
       - "5432:5432"
@@ -12,7 +12,7 @@ services:
     networks: 
       - live_prometheus
   api:
-    build: ./Dev/Api
+    build: ./Development/Api
     container_name: api
     ports:
       - "5555:5555"
@@ -36,7 +36,7 @@ services:
       - 10001:10001
       - 10002:10002
     volumes:
-      - ./Dev/Storage/azurite-data:/data
+      - ./Development/Storage/azurite-data:/data
     networks:
       - live_prometheus
 volumes:
