@@ -3,6 +3,15 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1 class="display-4">Bem-vindo de volta!</h1>
+        <p>Você está logado. Confira seus <a href="/Lead">Leads</a> agora.</p>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome</h1>
+        <p>Aprenda mais sobre <a href="https://learn.microsoft.com/aspnet/core">construir apps Web com ASP.NET Core</a>.</p>
+        <p><a href="/Identity/Account/Login">Faça login</a> para acessar mais recursos.</p>
+    }
 </div>

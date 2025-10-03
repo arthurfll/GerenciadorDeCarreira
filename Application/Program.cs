@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Source.Data;
+using Source.Services;
+using Source.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(
 ).AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<LeedRepository>();
+builder.Services.AddScoped<LeedService>();
 
 var app = builder.Build();
 
