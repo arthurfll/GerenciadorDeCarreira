@@ -22,7 +22,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
-
+app.MapRazorPages();
 app.UseHttpsRedirection();
 app.UseRouting();
 
